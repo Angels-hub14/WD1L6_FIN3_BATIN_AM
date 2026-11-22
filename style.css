@@ -1,0 +1,435 @@
+
+/* ==========================================================
+   Developer's Profile - Custom Bootstrap Theme
+   Palette: Evergreen, Moss Green, Sage, White
+   ========================================================== */
+
+:root {
+  --evergreen: #1f3d2b;
+  --evergreen-soft: #3a5c45;
+  --moss: #5c7a38;
+  --sage: #e4ecdc;
+  --sage-hint: #f3f7ef;
+  --white: #ffffff;
+  --ink: #17261d;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand {
+  font-family: var(--font-display);
+  color: var(--evergreen);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- Navbar ---- */
+
+.portfolio-navbar {
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--sage);
+  box-shadow: 0 0 0 rgba(31, 61, 43, 0);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.portfolio-navbar.navbar-scrolled {
+  padding: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 20px rgba(31, 61, 43, 0.18);
+}
+
+.portfolio-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.portfolio-navbar .nav-link {
+  color: var(--evergreen-soft);
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  transition: 0.3s ease;
+}
+
+.portfolio-navbar .nav-link:hover,
+.portfolio-navbar .nav-link.active {
+  color: var(--evergreen);
+  box-shadow: inset 0 -3px 0 var(--moss);
+}
+
+/* ---- Buttons ---- */
+
+.btn-evergreen {
+  background: var(--evergreen);
+  color: var(--white);
+  border: 2px solid var(--evergreen);
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.btn-evergreen:hover,
+.btn-evergreen:focus-visible {
+  background: var(--evergreen-soft);
+  border-color: var(--evergreen-soft);
+  color: var(--white);
+}
+
+.btn-outline-evergreen {
+  color: var(--evergreen);
+  border: 2px solid var(--evergreen);
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.btn-outline-evergreen:hover {
+  background: var(--evergreen);
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 3px solid var(--moss);
+  outline-offset: 2px;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  min-height: 100vh;
+  padding: 7rem 0 4rem;
+  background: linear-gradient(
+    160deg,
+    var(--sage) 0%,
+    var(--white) 55%,
+    var(--sage-hint) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.hero .row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-hello {
+  color: var(--moss);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-name {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--evergreen-soft);
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  max-width: 34rem;
+  margin-bottom: 1.8rem;
+}
+
+/* ---- Photo and Motto ---- */
+
+.photo-card {
+  display: block;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 0.8rem 0.8rem 1.2rem;
+  border: 2px solid var(--evergreen);
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 0 var(--sage);
+  max-width: 320px;
+  width: 100%;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: var(--sage);
+}
+
+.motto {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--evergreen);
+}
+
+/* ---- Generic Sections ---- */
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-sage {
+  background: var(--sage);
+}
+
+.section-hint {
+  background: var(--sage-hint);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.section-lead {
+  max-width: 38rem;
+  margin: 0 auto 2.5rem;
+  color: var(--evergreen-soft);
+  text-align: center;
+}
+
+/* ---- Philosophy Cards ---- */
+
+.phil-card {
+  height: 100%;
+  background: var(--white);
+  border: 2px solid var(--evergreen);
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.phil-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.phil-swatches {
+  margin-top: auto;
+}
+
+.phil-swatches span {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid var(--evergreen);
+  margin-right: 0.3rem;
+}
+
+/* ---- Project Cards ---- */
+
+.project-card {
+  height: 100%;
+  border: 2px solid var(--evergreen);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(31, 61, 43, 0.12);
+}
+
+.project-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.project-tag {
+  display: inline-block;
+  background: var(--sage);
+  color: var(--evergreen);
+  border-radius: 2rem;
+  padding: 0.1rem 0.8rem;
+  font-size: 0.85rem;
+  margin: 0 0.3rem 0.3rem 0;
+}
+
+.project-shot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--sage);
+}
+
+/* ---- Contact ---- */
+
+.contact-card {
+  max-width: 750px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 2px solid var(--evergreen);
+  border-radius: 1.2rem;
+  padding: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-links a {
+  color: var(--evergreen);
+  font-weight: 600;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.form-control:focus {
+  border-color: var(--moss);
+  box-shadow: 0 0 0 0.25rem rgba(92, 122, 56, 0.25);
+}
+
+/* ---- Footer ---- */
+
+.site-footer {
+  background: var(--evergreen);
+  color: var(--sage);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---- Entrance Animation ---- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Responsive Alignment ---- */
+
+@media (max-width: 991px) {
+  .portfolio-navbar .nav-link {
+    padding: 0.5rem;
+  }
+
+  .hero {
+    padding: 6rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero .row {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .photo-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 7rem 0 3rem;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .photo-card {
+    max-width: 250px;
+  }
+
+  .contact-card {
+    padding: 1.2rem;
+  }
+}
+
+/* ---- Reduced Motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portfolio-navbar,
+  .reveal,
+  .project-card {
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
